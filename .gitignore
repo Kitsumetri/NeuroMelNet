@@ -1,0 +1,7 @@
+.env
+Detection task/API/input_files
+Detection task/API/__pycache__
+Detection task/Datasets
+TTS task/Datasets
+TTS task/output
+TTS task/phoneme_cache
