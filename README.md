@@ -123,3 +123,38 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+## References
+```bibitex
+@article{jung2019RawNet,
+  title={RawNet: Advanced end-to-end deep neural network using raw waveforms for text-independent speaker verification},
+  author={Jung, Jee-weon and Heo, Hee-soo and Kim, ju-ho and Shim, Hye-jin and Yu, Ha-jin},
+  journal={Proc. Interspeech 2019},
+  pages={1268--1272},
+  year={2019}
+}
+
+@article{jung2020improved,
+  title={Improved RawNet with Feature Map Scaling for Text-independent Speaker Verification using Raw Waveforms},
+  author={Jung, Jee-weon and Kim, Seung-bin and Shim, Hye-jin and Kim, Ju-ho and Yu, Ha-Jin},
+  journal={Proc. Interspeech 2020},
+  pages={3583--3587},
+  year={2020}
+}
+
+@article{muller2022does,
+  title={Does audio deepfake detection generalize?},
+  author={M{\"u}ller, Nicolas M and Czempin, Pavel and Dieckmann, Franziska and Froghyar, Adam and B{\"o}ttinger, Konstantin},
+  journal={Interspeech},
+  year={2022}
+}
+
+@InProceedings{Sun_2023_CVPR,
+    author    = {Sun, Chengzhe and Jia, Shan and Hou, Shuwei and Lyu, Siwei},
+    title     = {AI-Synthesized Voice Detection Using Neural Vocoder Artifacts},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2023},
+    pages     = {904-912}
+}
+```
