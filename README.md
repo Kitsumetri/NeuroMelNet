@@ -1,7 +1,22 @@
 # NeuroMelNet
+## Introduction
+**NeuroMelNet** - End-to-End binary classification model for AI speech detection with PyTorch implementation. Python API for predict and training/fine-tuning is provided (check examples). Model is similar to RawNet2, but interpolated mel-spectograms are inputs for this model (see AudioProcessor for more information). In-the-wild & WaveFake datasets were used for training.
+
+![Untitled(5)](https://github.com/Kitsumetri/NeuroMelNet/assets/100523204/c3ba29aa-ef74-4197-b90d-7cd841742ab1)
+
+## Model metrics
+|Metric     |value   |
+|-----------|--------|
+| EER       | 0.0223 |
+| Accuracy  |0.9858  |
+| Precision | 0.9774 |
+| F1 Score  |0.9859  |
+
+![изображение](https://github.com/Kitsumetri/NeuroMelNet/assets/100523204/0ad3adf3-d7c6-4f3d-82a4-56106149bf1c)
+
 
 ## Quickstart
-``` 
+```shell
 git clone https://github.com/Kitsumetri/NeuroMelNet.git
 cd NeuroMelNet
 conda create --name NeuroMelNetEnv python=3.10
@@ -12,7 +27,7 @@ cd 'Detection task'/API
 
 ## Examples:
 ### Predict
-```
+```python
 from torchvision import transforms
 
 import torch
@@ -59,7 +74,7 @@ if __name__ == '__main__':
 ```
 
 ### Train
-```
+```python
 import torch.nn as nn
 import pandas as pd
 
