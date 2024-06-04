@@ -3,16 +3,16 @@ from torchvision import transforms
 import constants as consts
 from model import NeuroMelNet
 from processor import AudioProcessor
-from utils import load_checkpoint
+from utils import load_checkpoint, AudioProcessorConfig
 
 from typing import Tuple
 import torch
 
+audio_config = AudioProcessorConfig()
 
 preprocessor = transforms.Compose(
     [
-        AudioProcessor(sample_rate=consts.SAMPLE_RATE, 
-                       size=consts.AUDIO_SIZE)
+        AudioProcessor(audio_config)
     ]
 )
 
@@ -111,8 +111,8 @@ async def audio_input(message: Message):
         await message.reply('Неподдерживаемый формат.\nПоддерживаемые форматы: ogg, wav, mp3')
         return
 
-    if file_size > 5:
-        await message.reply('Аудиозапись не должна весить более 5 mb')
+    if file_size > 10:
+        await message.reply('Аудиозапись не должна весить более 10 mb')
         return
     
     process_message = await message.reply('Обрабатываем ваш запрос...')

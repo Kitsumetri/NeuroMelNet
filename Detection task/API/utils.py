@@ -5,6 +5,19 @@ import numpy as np
 
 import constants as consts
 
+from dataclasses import dataclass, field
+from typing import Tuple
+
+
+@dataclass
+class AudioProcessorConfig:
+    sample_rate: int = field(default=consts.SAMPLE_RATE)
+    size: Tuple[int, int] = field(default=consts.AUDIO_SIZE)
+    n_fft: int = field(default=consts.N_FFT)
+    hop_length: int = field(default=consts.HOP_LENGTH)
+    n_mels: int = field(default=consts.N_MELS)
+
+
 def load_checkpoint(load_path: str,  
                     model: nn.Module, 
                     pretrained_eval=False, 
@@ -36,9 +49,9 @@ def mel_spectrogram(audio, sample_rate,
     
     mel_spec = lb.feature.melspectrogram(y=audio, 
                                          sr=sample_rate,    
-                                        n_fft=n_fft,
-                                        hop_length=hop_length, 
-                                        n_mels=n_mels)
+                                         n_fft=n_fft,
+                                         hop_length=hop_length, 
+                                         n_mels=n_mels)
     
     mel_spec_db = lb.power_to_db(mel_spec, ref=np.max)
     return mel_spec_db
